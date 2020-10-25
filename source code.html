@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/> 
+<style>
+	body {
+	  background: white;
+	  font-family: sans-serif;
+	  color: #5e5e5e;
+	}
+
+	#menu {
+	  position: fixed;
+	  z-index: 9999;
+	  /* Most times is 2000 used as middle */
+	  visibility: hidden;
+	  opacity: 0;
+
+	  padding: 0px;
+	  font-family: sans-serif;
+	  font-size: 11px;
+	  background: #0A3041;
+	  color: #fff;
+	  border: 1px solid #C6C6C6;
+
+	  -webkit-transition: opacity .5s ease-in-out;
+	  -moz-transition: opacity .5s ease-in-out;
+	  transition: opacity .5s ease-in-out;
+
+	  -webkit-box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
+	  -moz-box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
+	  box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
+	}
+
+	#menu a.menu {
+	  display: block;
+	  color: #fff;
+	  text-decoration: none;
+	  padding: 6px 8px 6px 30px;
+	  width: 250px;
+	  position: relative;
+	  font-weight:bold;
+	}
+
+	#menu a.menu img,
+	#menu a.menu i.fa {
+	  height: 20px;
+	  font-size: 17px;
+	  width: 20px;
+	  position: absolute;
+	  left: 5px;
+	  top: 2px;
+	}
+
+	#menu a.menu span {
+	  color: #BCB1B3;
+	  float: right;
+	}
+
+	#menu a.menu:hover {
+	  color: #fff;
+	  background: #3879D9;
+	}
+
+	#menu hr {
+	  border: 1px solid #EBEBEB;
+	  border-bottom: 0;
+	}
+	.fa{
+		width:45px;
+		font-size:18px;
+		color:white;
+	}
+</style>
+</head>
+<body>
+right click to see the menu
+
+	<div id="menu">
+	  <a class="menu" href="http://edtech.co.tz">
+		<i class="fa fa-home"></i> Home <span> </span>
+	  </a>
+	  <a class="menu" href="/service">
+		<i class="fa fa-laptop"> </i>services <span> </span>
+	  </a>
+	  <a class="menu" href="/portfolios">
+		<i class="fa fa-pie-chart"></i> PortFolio <span> </span>
+	  </a>
+	  <a class="menu" href="/About-Us/22/page">
+		<i class="fa fa-pencil-square-o"></i> About Us <span> </span>
+	  </a>
+	  <a class="menu" href="/contact">
+		<i class="fa fa-envelope-o"></i> Contact Us <span> </span>
+	  </a>
+	  <hr />
+	  <a class="menu" href="/gallery">
+		<i class="fa fa-photo"></i> Gallery <span> </span>
+	  </a>
+	  <a class="menu" href="/career">
+		<i class="fa fa-briefcase"></i> Careers <span> </span>
+	  </a>
+	  <a class="menu" href="/blogs">
+		<i class="fa fa-file-text"></i> Blog <span> </span>
+	  </a>
+	  <hr />
+	  <a class="menu" href="">
+		<i></i> Reload <span>ctrl+R </span>
+	  </a>
+	  <a class="menu" href="#">
+		<i></i> view Source <span>ctrl+U </span>
+	  </a>
+	  <a class="menu" class="menu" href="#">
+		<i></i> Inspect <span>ctrl+shift+I </span>
+	  </a>
+	  <hr />
+	  <center>
+		<a  href="https://wanda.buzz"><i class="fa fa-facebook" ></i></a>
+		<a  href="https://wanda.buzz"><i class="fa fa-instagram" ></i></a>
+		<a  href="https://wanda.buzz"><i class="fa fa-linkedin" ></i></a>
+	  </center>
+	  <hr />
+	</div>
+	
+	<script>
+		var i = document.getElementById("menu").style;
+		if (document.addEventListener) {
+		  document.addEventListener('contextmenu', function(e) {
+			var posX = e.clientX;
+			var posY = e.clientY;
+			menu(posX, posY);
+			e.preventDefault();
+		  }, false);
+		  document.addEventListener('click', function(e) {
+			i.opacity = "0";
+			setTimeout(function() {
+			  i.visibility = "hidden";
+			}, 501);
+		  }, false);
+		} else {
+		  document.attachEvent('oncontextmenu', function(e) {
+			var posX = e.clientX;
+			var posY = e.clientY;
+			menu(posX, posY);
+			e.preventDefault();
+		  });
+		  document.attachEvent('onclick', function(e) {
+			i.opacity = "0";
+			setTimeout(function() {
+			  i.visibility = "hidden";
+			}, 501);
+		  });
+		}
+
+		function menu(x, y) {
+		  i.top = y + "px";
+		  i.left = x + "px";
+		  i.visibility = "visible";
+		  i.opacity = "1";
+		}
+
+	</script>
+
+
+</body>
+</html>
