@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/> 
-<style>
-	body {
-	  background: white;
-	  font-family: sans-serif;
-	  color: #5e5e5e;
-	}
+	<!-- this can be replaced with offline version of font awesome -->
+	
+	<!--font awesome icons -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/> 
+	
+	<!-- ^^ can be replaced with offline version of font awesome -->
+	<!-- you can also use alternative icons if you like -->
+	<style>
+		body {
+		  background: white;
+		  font-family: sans-serif;
+		  color: #5e5e5e;
+		}
 
-	#menu {
-	  position: fixed;
-	  z-index: 9999;
-	  /* Most times is 2000 used as middle */
-	  visibility: hidden;
-	  opacity: 0;
+		#menu {
+		  position: fixed;
+		  z-index: 9999;
+		  /* Most times is 2000 used as middle */
+		  visibility: hidden;
+		  opacity: 0;
 
-	  padding: 0px;
-	  font-family: sans-serif;
-	  font-size: 11px;
-	  background: #0A3041;
-	  color: #fff;
-	  border: 1px solid #C6C6C6;
+		  padding: 0px;
+		  font-family: sans-serif;
+		  font-size: 11px;
+		  background: #0A3041;
+		  color: #fff;
+		  border: 1px solid #C6C6C6;
 
-	  -webkit-transition: opacity .5s ease-in-out;
-	  -moz-transition: opacity .5s ease-in-out;
-	  transition: opacity .5s ease-in-out;
+		  -webkit-transition: opacity .5s ease-in-out;
+		  -moz-transition: opacity .5s ease-in-out;
+		  transition: opacity .5s ease-in-out;
 
-	  -webkit-box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
-	  -moz-box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
-	  box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
-	}
+		  -webkit-box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
+		  -moz-box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
+		  box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
+		}
 
-	#menu a.menu {
-	  display: block;
-	  color: #fff;
-	  text-decoration: none;
-	  padding: 6px 8px 6px 30px;
-	  width: 250px;
-	  position: relative;
-	  font-weight:bold;
-	}
+		#menu a.menu {
+		  display: block;
+		  color: #fff;
+		  text-decoration: none;
+		  padding: 6px 8px 6px 30px;
+		  width: 250px;
+		  position: relative;
+		  font-weight:bold;
+		}
 
-	#menu a.menu img,
-	#menu a.menu i.fa {
-	  height: 20px;
-	  font-size: 17px;
-	  width: 20px;
-	  position: absolute;
-	  left: 5px;
-	  top: 2px;
-	}
+		#menu a.menu img,
+		#menu a.menu i.fa {
+		  height: 20px;
+		  font-size: 17px;
+		  width: 20px;
+		  position: absolute;
+		  left: 5px;
+		  top: 2px;
+		}
 
-	#menu a.menu span {
-	  color: #BCB1B3;
-	  float: right;
-	}
+		#menu a.menu span {
+		  color: #BCB1B3;
+		  float: right;
+		}
 
-	#menu a.menu:hover {
-	  color: #fff;
-	  background: #3879D9;
-	}
+		#menu a.menu:hover {
+		  color: #fff;
+		  background: #3879D9;
+		}
 
-	#menu hr {
-	  border: 1px solid #EBEBEB;
-	  border-bottom: 0;
-	}
-	.fa{
-		width:45px;
-		font-size:18px;
-		color:white;
-	}
-</style>
+		#menu hr {
+		  border: 1px solid #EBEBEB;
+		  border-bottom: 0;
+		}
+		.fa{
+			width:45px;
+			font-size:18px;
+			color:white;
+		}
+	</style>
 </head>
 <body>
-right click to see the menu
+	right click to see the menu
 
 	<div id="menu">
 	  <a class="menu" href="http://edtech.co.tz">
